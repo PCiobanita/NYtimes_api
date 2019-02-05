@@ -121,5 +121,5 @@ class MovieReview
     end
     url_array
   end
-  
+
 end

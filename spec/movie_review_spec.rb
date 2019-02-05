@@ -4,7 +4,7 @@ describe NYtimes do
 
   before(:all) do 
     @movie_review = NYtimes.new.movie_review
-    p @movie_review.retrieve_movie_review('inception',ENV['API_KEY'])
+    @movie_review.retrieve_movie_review('inception',ENV['API_KEY'])
   end
 
   it 'should retrieve data and have status as "OK" ' do
@@ -15,15 +15,15 @@ describe NYtimes do
     expect(@movie_review.retrieve_copyright).to be_kind_of(String)
   end
   
-  it 'should retrieve a boolean weaether there are more results with that name' do 
+  it 'should retrieve a boolean weaether there are more results with that name' do
     expect(@movie_review.retrieve_more_movies).to be(true) | be(false)
   end
   
-  it 'should retrieve how many results did it find with that name in form of an integer' do 
+  it 'should retrieve how many results did it find with that name in form of an integer' do
     expect(@movie_review.retrieve_number_of_results).to be_kind_of(Integer)
   end
   
-  it 'should retrive at least one result' do 
+  it 'should retrive at least one result' do
     expect(@movie_review.retrieve_number_of_results).to be >= 1
   end
 
@@ -94,7 +94,6 @@ describe NYtimes do
 
   it 'opening date should be a valid date format' do
     @movie_review.retrieve_opening_date.each do |date|
-      p date
      expect(DateTime.parse(date)).to be_an_instance_of(DateTime)
     end
   end
