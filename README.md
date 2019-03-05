@@ -2,7 +2,7 @@
 # weather_api
 
 ### Description
-This is an application that calls movie reviews from NYTimes api. It takes the name it has been insterted and find matches that contains that name. It retrives maximum 20 movie reviews
+This is an SOM that calls movie reviews from NYTimes api. It takes the name it has been insterted and find matches that contains that name. It retrives maximum 20 movie reviews
 
 ### Languages used
 * Ruby
